@@ -1,0 +1,60 @@
+m{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background: rgb(133, 133, 133);
+background: -moz-linear-gradient(60deg, rgba(black,black,black,black) 0%, rgba(black,black,black,black) 60%);
+background: -webkit-linear-gradient(90deg, rgba(silver,0,silver,1) 0%, rgba(121,9,88,0.7810311624649859) 60%);
+background: linear-gradient(60deg, rgba(2,0,0,1) 0%, rgba(125,192,203,0.7810311624649859) 60%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#700089",endColorstr="#700089",GradientType=1);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 5em);
+  margin-top: 6rem;
+}
+
+.container > button {
+  border: 1px solid white;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  background: rgba(255, 255, 255, .75);
+  font-weight: bold;
+}
+
+.container > button:hover, .container > button:focus {
+  background: rgba(255, 255, 255, .9)
+}
+
+.row-2 {
+  grid-column: span 2;
+}
+
+.result {
+  grid-column:  1 / -1;
+  background: rgba(22, 1, 2, .45);
+  word-wrap: break-word;
+  word-break: break-all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: .75rem;
+  justify-content: space-around;
+}
+
+.result .prev-result {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.result .current-result {
+  color: skip-white-space;
+  font-size: 3.5rem
+}
